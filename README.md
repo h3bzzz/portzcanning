@@ -13,7 +13,6 @@ complicated enough to get me acquainted with libraries I will most likely be usi
 ```
 src/
 ├── main.zig           # Production implementation with comprehensive tests
-├── new_scanner.zig    # Experimental/development version
 └── tests              # Test are built-in, I didnt bother with anothe file.
 ```
 
