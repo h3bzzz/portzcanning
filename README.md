@@ -58,7 +58,7 @@ while (i < 65535) : (i += 1) {
 try port_set.put(65535, {});
 ```
 
-**Insight**: Zig's runtime safety catches integer overflows that would be undefined behavior in C/C++.
+**Note**: Zig's runtime safety catches integer overflows that would be undefined behavior in C/C++.
 
 ### 2. Network Programming 
 
@@ -93,7 +93,7 @@ if (ready > 0 and (pfd[0].revents & posix.POLL.OUT) != 0) {
 }
 ```
 
-**Key Learning**: Zig's POSIX bindings provide zero-cost abstractions over system calls while maintaining type safety.
+**Sweet**: Zig's POSIX bindings provide zero-cost abstractions over system calls while maintaining type safety.
 
 ### 3. Concurrency and Thread Safety
 
@@ -126,7 +126,7 @@ fn scanTask(
 }
 ```
 
-**Insight**: Zig's `defer` mechanism ensures mutex unlocking even on early returns or panics.
+**Note**: Zig's `defer` mechanism ensures mutex unlocking even on early returns or panics.
 
 ### 4. Error Handling Evolution
 
@@ -158,7 +158,7 @@ if (connect_result) |_| {
 }
 ```
 
-**Technical Insight**: Zig's error unions force explicit handling at compile time, eliminating entire classes of runtime errors.
+**Note**: Zig's error unions force explicit handling at compile time, eliminating entire classes of runtime errors.
 
 ### 5. Format System Deep Dive
 
@@ -199,7 +199,7 @@ const ScanResult = struct {
 };
 ```
 
-**Insight**: Zig's struct system provides zero-cost abstractions with compile-time type checking.
+**Note**: Zig's struct system provides zero-cost abstractions with compile-time type checking.
 
 ## Performance Characteristics
 
