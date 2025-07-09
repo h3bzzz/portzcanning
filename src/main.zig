@@ -57,7 +57,6 @@ const Options = struct {
     }
 };
 
-// New struct to hold our results
 const ScanResult = struct {
     address: net.Address,
     port: u16,
