@@ -252,7 +252,6 @@ errdefer options.deinit();
 ### Test Execution
 ```bash
 zig test src/main.zig        # 14 tests
-zig test src/new_scanner.zig # 15 tests
 ```
 
 ## Comparative Analysis: Zig vs Traditional Systems Languages
