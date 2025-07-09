@@ -269,9 +269,9 @@ zig test src/new_scanner.zig # 15 tests
 Zig has gone out of its way to deal with the very hard and make the even harder simple.
 
 ### Systems Programming Insights
-1. **Error Propagation**: Explicit error handling leads to more robust code
-2. **Memory Patterns**: RAII-style patterns work well even without destructors
-3. **Concurrency**: Simple thread pools often outperform complex async systems
+1. **std.net.getAddressList**: Has very nifty DNS resolution built-in
+2. **net.Address**: Has builtin IP formatting for IPv4 and IPv6
+   
 
 ## Conclusion
 
