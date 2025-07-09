@@ -212,47 +212,7 @@ const ScanResult = struct {
 
 ![Port Scanner Benchmark Results](poopportscan.png)
 
-**Benchmark Details:**
-- **Tool Used**: `poop` performance comparison utility
-- **Test Environment**: Local development machine
-- **Sample Duration**: 5000ms continuous sampling
-- **Command Tested**: Full port scan (`all` ports) against localhost
-
-**Key Performance Metrics:**
-- Consistent execution times across multiple runs
-- Memory-efficient operation with minimal allocation overhead
-- Stable performance profile indicating robust implementation
-
-### Memory Profile
-- **Peak Memory Usage**: Minimal heap allocation during scanning
-- **Memory Leaks**: Zero (verified by built-in leak detection)
-- **Allocation Patterns**: Upfront allocation for port lists, minimal runtime allocation
-
 ## Error Discovery and Resolution Timeline
-
-### 1. Format String Errors
-```
-error: invalid format string 's' for type 'net.Address'
-```
-**Resolution**: Use default formatter `{}` instead of string formatter `{s}`.
-
-### 2. Socket Option API Evolution
-```
-error: expected 4 argument(s), found 5
-```
-**Resolution**: Adapted to Zig's evolving POSIX API surface.
-
-### 3. Integer Overflow Protection
-```
-thread panic: integer overflow
-```
-**Resolution**: Careful loop bounds to prevent u16 overflow.
-
-### 4. Memory Management Patterns
-```
-error: error set is discarded
-```
-**Resolution**: Proper error handling instead of discarding with `_`.
 
 ## Advanced Zig Features Utilized
 
@@ -305,32 +265,6 @@ zig test src/new_scanner.zig # 15 tests
 | Compile Times | Slow (C++) | Slow | Fast |
 | Learning Curve | High | Very High | Moderate |
 
-## Production Deployment Considerations
-
-### Performance Optimizations
-- **Release Mode**: Use `zig build -Doptimize=ReleaseFast`
-- **Target Tuning**: Cross-compilation for specific architectures
-- **Memory Pools**: Consider custom allocators for high-frequency scanning
-
-### Security Considerations
-- **Privilege Escalation**: Raw socket operations may require elevated privileges
-- **Rate Limiting**: Implement backoff mechanisms for network courtesy
-- **Input Validation**: All user inputs are validated and sanitized
-
-## Future Enhancements
-
-### Planned Features
-1. **Protocol Detection**: Identify services running on open ports
-2. **IPv6 Support**: Enhanced dual-stack networking
-3. **Output Formats**: JSON, XML, CSV export options
-4. **Stealth Scanning**: SYN scan implementation
-5. **Plugin Architecture**: Extensible service detection
-
-### Zig Language Evolution
-- **Package Manager**: Transition to official package management
-- **Async/Await**: Explore Zig's async capabilities for I/O
-- **SIMD**: Leverage vector instructions for parallel processing
-
 ## Lessons Learned
 
 ### Zig's Philosophy
@@ -345,6 +279,6 @@ zig test src/new_scanner.zig # 15 tests
 
 ## Conclusion
 
-This port scanner project demonstrates Zig's potential as a systems programming language. The combination of memory safety, explicit error handling, and zero-cost abstractions provides a compelling alternative to traditional systems languages while maintaining the performance characteristics demanded by network programming applications.
+This port scanner project got me a little closer to understanding Zig's potential as a systems programming language, coming from Golang. I feel very at home with the simplicity in the syntax. 
+Curious to see what the new compiler will bring to the table.
 
-The development journey revealed both the maturity and the evolving nature of Zig's ecosystem, making it an excellent choice for systems engineers who value explicitness, performance, and safety in equal measure.
