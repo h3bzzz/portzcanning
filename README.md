@@ -266,11 +266,7 @@ zig test src/new_scanner.zig # 15 tests
 | Learning Curve | High | Very High | Moderate |
 
 ## Lessons Learned
-
-### Zig's Philosophy
-1. **Explicit over Implicit**: No hidden control flow or allocations
-2. **Incremental Improvement**: Better C, not reimagined systems programming
-3. **Simplicity**: Fewer language features, more powerful combinations
+Zig has gone out of its way to deal with the very hard and make the even harder simple.
 
 ### Systems Programming Insights
 1. **Error Propagation**: Explicit error handling leads to more robust code
