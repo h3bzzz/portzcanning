@@ -1,0 +1,13 @@
+# Zig build artifacts
+zig-out/
+zig-cache/
+.zig-cache/
+
+# Compiled binaries
+main
+new_scanner
+portscanner
+*.exe
+*.o
+*.obj
+
