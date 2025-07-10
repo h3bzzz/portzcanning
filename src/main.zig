@@ -8,9 +8,6 @@ const Thread = std.Thread;
 const ArrayList = std.ArrayList;
 const Allocator = std.mem.Allocator;
 
-// std.net.getAddressList is the high-level function for resolution
-// check std.net.getAddressList docs
-
 const MAX_THREADS = 1000;
 const TIMEOUT_MS = 1000;
 
@@ -338,7 +335,6 @@ pub fn main() !void {
     }
 }
 
-// TESTS
 const testing = std.testing;
 
 test "Options initialization and cleanup" {
