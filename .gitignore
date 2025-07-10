@@ -2,7 +2,7 @@
 zig-out/
 zig-cache/
 .zig-cache/
-
+.gitignore
 # Compiled binaries
 main
 new_scanner
